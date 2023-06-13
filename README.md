@@ -1,8 +1,11 @@
 # Exercicios_Arduino
 Link para os circuitos feitos no TINKERCAD para os exercícios da capacitação:
 
-Exercício 01:
+Exercício 01 A:
 https://www.tinkercad.com/things/fNuMqOxIuWZ?sharecode=I3dY6eJClTCLGK-SPaaTD0UqcfSTJyrI-XUmapxAhMo
+
+Exercício 01 B:
+https://www.tinkercad.com/things/juBad1y2iFA?sharecode=K1-YAnV_xTbX_SWf-otzl5RVrXDBL9Zgv7P4NmB9qYY
 
 Exercício 02:
 https://www.tinkercad.com/things/kcTZjpxOuuL?sharecode=p1jMnxIhddF9dPz_JV-JjwiZ-4iHRFkDnCTGGhIjSZ4
