@@ -47,16 +47,13 @@ void loop()
       servoMotor.write(posSM);
         delay(25);
       }
-      Serial.println("for HOR finalizado!");
       comandoInicial();
       
     }else if(comandoUsuario == "ant"){
         for(posSM = 0; posSM<=180; posSM++){
         servoMotor.write(posSM);
-          Serial.println(posSM);
           delay(25);
         }
-        Serial.println("for ANT finalizado!");
         comandoInicial();
       
     }else{
@@ -68,7 +65,7 @@ void loop()
 }
 
 void comandoInicial(){
-  Serial.println("Determine um comando para o servo: ");
+  Serial.println("Determine um comando para o servo:[hor ou ant] ");
   
   while (Serial.available() == 0) {
   }

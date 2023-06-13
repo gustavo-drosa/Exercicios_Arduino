@@ -1,5 +1,7 @@
 1) Explique como funcionam os métodos attach(), write() e read() da biblioteca servo.h
 R:
-attach() serve para vincular o objeto que é necessário criar para controlar o servo ao servo Motor do circuito conetado no arduino, a biblioteca reconhece apenas nos pinos digitais 9 e 10;
-write() em um servo padrão,serve para definir a posição do "braço" do servo motor a um ângulo(numero inteiro de 0 a 180). Em um servo de rotação, esse método define a velocidade de rotação, onde 0 rotaciona toda velocidade para um lado e 180 para outro, enquanto o valor 90 deixa o servo quase imóvel;
-read() serve para receber o valor daquele angulo especifico em que o servo motor se encontra posicionado;
+attach() - serve para vincular o objeto que é necessário criar para controlar o servo ao servo Motor do circuito conetado no arduino, a biblioteca reconhece apenas nos pinos digitais 9 e 10;
+
+write() - em um servo padrão,serve para definir a posição do "braço" do servo motor a um ângulo(numero inteiro de 0 a 180). Em um servo de rotação, esse método define a velocidade de rotação, onde 0 rotaciona toda velocidade para um lado e 180 para outro, enquanto o valor 90 deixa o servo quase imóvel;
+
+read() - serve para receber o valor daquele angulo especifico em que o servo motor se encontra posicionado;
