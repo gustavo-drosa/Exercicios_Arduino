@@ -47,35 +47,29 @@ void setup() {
 
 void loop() {
   Serial.println(dedo);
-
+  
   if (dedo.equals("1")) {
-    servoDedao.write(0);
-    Serial.println("Dedao levantando!");
-    aguardeComando();
+     comandosDedao();
+     aguardeComando();
     
   } else if (dedo.equals("2")) {
-    servoIndicador.write(0);
-    Serial.println("Indicador levantando!");
+    comandosIndicador();
     aguardeComando();
     
   } else if (dedo.equals("3")) {
-    servoMedio.write(0);
-    Serial.println("Medio levantando!");
+    comandosMedio();
     aguardeComando();
     
   } else if (dedo.equals("4")) {
-    servoAnelar.write(0);
-    Serial.println("Anelar levantando!");
+    comandosAnelar();
     aguardeComando();
     
   } else if (dedo.equals("5")) {
-    servoMinimo.write(0);
-    Serial.println("Minimo levantando!");
+    comandosMinimo();
     aguardeComando();
     
   } else if (dedo.equals("r")) {
     posicaoInicial();
-    Serial.println("servos de volta a posicao original!");
     aguardeComando();
     
   } else {
@@ -84,12 +78,65 @@ void loop() {
   }
 }
 
+void comandosDedao(){
+  if(servoDedao.read() == 180){
+      servoDedao.write(0);
+      Serial.println("Dedao levantando!");
+        }else if (servoDedao.read() == 0){
+          servoDedao.write(180);
+          Serial.println("Dedao abaixando!");
+        }
+}
+
+void comandosIndicador(){
+  if(servoIndicador.read() == 180){
+      servoIndicador.write(0);
+      Serial.println("Indicador levantando!");
+        }else if (servoIndicador.read() == 0){
+          servoIndicador.write(180);
+          Serial.println("Indicador abaixando!");
+        }
+}
+
+void comandosMedio(){
+  if(servoMedio.read() == 180){
+      servoMedio.write(0);
+      Serial.println("Medio levantando!");
+        }else if (servoMedio.read() == 0){
+          servoMedio.write(180);
+          Serial.println("Medio abaixando!");
+        }
+}
+
+void comandosAnelar(){
+  if(servoAnelar.read() == 180){
+      servoAnelar.write(0);
+      Serial.println("Anelar levantando!");
+        }else if (servoAnelar.read() == 0){
+          servoAnelar.write(180);
+          Serial.println("Anelar abaixando!");
+        }
+}
+
+void comandosMinimo(){
+  if(servoMinimo.read() == 180){
+      servoMinimo.write(0);
+      Serial.println("Minimo levantando!");
+        }else if (servoMinimo.read() == 0){
+          servoMinimo.write(180);
+          Serial.println("Minimo abaixando!");
+        }
+}
+
+
+
 void posicaoInicial() {
   servoDedao.write(posMax);
   servoIndicador.write(posMax);
   servoMedio.write(posMax);
   servoAnelar.write(posMax);
   servoMinimo.write(posMax);
+  Serial.println("Servos em posição inicial");
 }
 
 void aguardeComando() {
@@ -99,7 +146,7 @@ void aguardeComando() {
   Serial.println("4 - Anelar");
   Serial.println("5 - Minimo");
   Serial.println("Insira a posicao de um dedo para movimenta-lo: ");
-  while (Serial.available()) {
+  while (Serial.available() == 0) {
   }
   dedo = Serial.readString();
 }
