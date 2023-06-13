@@ -18,3 +18,6 @@ https://www.tinkercad.com/things/bUZNpBZLwF4?sharecode=iluWfsX5ftloUlxV9MBgoX18p
 
 Exercício 05:
 https://www.tinkercad.com/things/1u4juc4eUxR?sharecode=RjPUtC73i2ney9gOv_kRdlJ-TcRYY82Pbo8K5hRaIPE
+
+Exercício Extra:
+https://www.tinkercad.com/things/emfVdyqfflT?sharecode=NBSGYA1Inb-bJJASbg_k0Zrs_XKM70GicGrMNFlDbcU
