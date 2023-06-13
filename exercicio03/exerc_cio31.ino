@@ -26,15 +26,7 @@ Servo servoMotor;
 
 String comandoUsuario;
 
-void comandoInicial(){
-  Serial.println("Determine um comando para o servo: ");
-  
-  while (Serial.available() == 0) {
-  }
-  comandoUsuario = Serial.readString();
-}
-
-  int posSM = 0;
+int posSM = 0;
 
 void setup()
 {
@@ -46,37 +38,39 @@ void setup()
 
 void loop()
 {  
-  //Ler comando do terminal;
+  
   Serial.println(comandoUsuario);
   servoMotor.write(posSM);
-
-  //Traduzir comando de char para int
+  
     if(comandoUsuario.equals("hor")){
       for(posSM = 180;posSM>=0; posSM--){
       servoMotor.write(posSM);
-        Serial.println(posSM);
-        delay(50);
-   		
+        delay(25);
       }
       Serial.println("for HOR finalizado!");
       comandoInicial();
       
-    }else{
-      if(comandoUsuario == "ant"){
+    }else if(comandoUsuario == "ant"){
         for(posSM = 0; posSM<=180; posSM++){
         servoMotor.write(posSM);
           Serial.println(posSM);
-          delay(50);
+          delay(25);
         }
         Serial.println("for ANT finalizado!");
         comandoInicial();
-      }else{
+      
+    }else{
         posSM = 90;
         servoMotor.write(posSM);
         Serial.println("Posicao original do Servo Motor retomada.");
         comandoInicial();
       }
-      
-  }
+}
+
+void comandoInicial(){
+  Serial.println("Determine um comando para o servo: ");
   
+  while (Serial.available() == 0) {
+  }
+  comandoUsuario = Serial.readString();
 }

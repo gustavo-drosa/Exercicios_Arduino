@@ -27,6 +27,8 @@ Servo servoMedio;
 Servo servoAnelar;
 Servo servoMinimo;
 
+int posMax = 180;
+
 String dedo;
 
 void setup() {
@@ -83,7 +85,6 @@ void loop() {
 }
 
 void posicaoInicial() {
-  int posMax = 180;
   servoDedao.write(posMax);
   servoIndicador.write(posMax);
   servoMedio.write(posMax);

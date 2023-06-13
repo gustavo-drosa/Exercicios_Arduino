@@ -1,0 +1,5 @@
+1) Explique como funcionam os métodos attach(), write() e read() da biblioteca servo.h
+R:
+attach() serve para vincular o objeto que é necessário criar para controlar o servo ao servo Motor do circuito;
+write() serve para definir a posição do "braço" do servo motor a um numero inteiro;
+read() serve para receber o valor daquela posição especifica em que o servo motor se encontra;

@@ -25,7 +25,6 @@ void setup()
   lcd.begin(16, 2); //inicia lcd
   pinMode(IR, INPUT);
   lcd.setCursor(0,0);
-  
 }
 
 void loop()
@@ -40,27 +39,16 @@ void loop()
     case 0:
   	objetoNaoDetectado();
   }
- /* if(movimento){
-    objetoDetectado();
-    Serial.println("objeto detectado");
-  }else{
-    objetoNaoDetectado();
-    Serial.println("nenhuma presenca detectada");
-  }*/
 } 
 
 void objetoDetectado(){
-  lcd.clear();
-  lcd.print("OBJETO");
+  lcd.print("OBJETO          ");
   lcd.setCursor(0,1);
-  lcd.print("DETECTADO!");
-  delay(150);
+  lcd.print("DETECTADO!      ");
 }
 
 void objetoNaoDetectado(){
-  lcd.clear();
-  lcd.print("OBJETO");
+  lcd.print("OBJETO          ");
   lcd.setCursor(0,1);
-  lcd.print("NAO DETECTADO");
-  delay(150);
+  lcd.print("NAO DETECTADO!   ");
 }
