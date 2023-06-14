@@ -23,6 +23,7 @@ void setup()
 { 
   Serial.begin(9600);
   lcd.begin(16, 2); //inicia lcd
+  pinMode(led, OUTPUT);
   pinMode(IR, INPUT);
   lcd.setCursor(0,0);
 }
@@ -42,13 +43,17 @@ void loop()
 } 
 
 void objetoDetectado(){
+  digitalWrite(led, HIGH);
   lcd.print("OBJETO          ");
   lcd.setCursor(0,1);
   lcd.print("DETECTADO!      ");
+  delay(100);
 }
 
 void objetoNaoDetectado(){
+  digitalWrite(led,LOW);
   lcd.print("OBJETO          ");
   lcd.setCursor(0,1);
   lcd.print("NAO DETECTADO!   ");
+  delay(100);
 }
